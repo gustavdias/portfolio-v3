@@ -16,6 +16,9 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import NavDrawer from "./NavDrawer";
 import Typed from "react-typed";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import AssignmentInd from "@material-ui/icons/AssignmentInd";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -169,7 +172,9 @@ export default function NavBar(props) {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <NavDrawer />
+          <div className={classes.sectionMobile}>
+            <NavDrawer />
+          </div>
           {/* <IconButton
             edge="start"
             className={classes.menuButton}
@@ -192,25 +197,36 @@ export default function NavBar(props) {
           </Typography>
 
           {/* --------------------------------- Search Bars --------------------------------- */}
-
-          <div className={classes.search}>
-            {/* <div className={classes.searchIcon}> */}
-              {/* <SearchIcon /> */}
-            </div>
-
- {/* This part is for what you want to see only on desktop view */}
           <div className={classes.sectionDesktop}>
-          {/* --------------------------------- Email --------------------------------- */}
-          <Typography style={{ color: "#19a9bc", fontFamily: "Montserrat" }}>
-            <Typed
-              strings={["gustav.almd@gmail.com"]}
-              startDelay={1000}
-              showCursor={false}
-              typeSpeed={80}
-            />
-          </Typography>
+            <div className={classes.search}>
+              {/* <div className={classes.searchIcon}> */}
+              {/* <SearchIcon /> */}
+
+              {/* Resume */}
+              <IconButton aria-label="show 4 new mails" color="inherit">
+                <AssignmentInd />
+              </IconButton>
+
+              {/* email */}
+              <IconButton aria-label="show 4 new mails" color="inherit">
+                <MailIcon />
+              </IconButton>
+            </div>
           </div>
-            {/* <InputBase
+
+          {/* This part is for what you want to see only on desktop view */}
+          <div className={classes.sectionDesktop}>
+            {/* --------------------------------- Email --------------------------------- */}
+            <Typography style={{ color: "#19a9bc", fontFamily: "Montserrat" }}>
+              <Typed
+                strings={["gustav.almd@gmail.com"]}
+                startDelay={1000}
+                showCursor={false}
+                typeSpeed={80}
+              />
+            </Typography>
+          </div>
+          {/* <InputBase
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
@@ -223,17 +239,23 @@ export default function NavBar(props) {
 
           {/* This part is for what you want to see only on desktop view */}
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon color='inherit'/>
-              </Badge>
-            </IconButton>
-            <IconButton
+            <div className={classes.search}>
+              <IconButton aria-label="show 4 new mails" color="inherit">
+                <Badge >
+                  <LinkedInIcon />
+                </Badge>
+              </IconButton>
+              <IconButton
+                aria-label="show 17 new notifications"
+                color="inherit"
+              >
+                                {/* <Badge badgeContent={17} color="secondary"> */}
+
+                <Badge >
+                  <GitHubIcon color="inherit" />
+                </Badge>
+              </IconButton>
+              {/* <IconButton
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -242,7 +264,8 @@ export default function NavBar(props) {
               color="inherit"
             >
               <AccountCircle />
-            </IconButton>
+            </IconButton> */}
+            </div>
           </div>
 
           {/* This part is for what you want to see on mobile view */}

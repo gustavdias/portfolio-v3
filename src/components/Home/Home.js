@@ -7,8 +7,8 @@ import Skills from '../Skills/Skills'
 // import Contact from '../Contact/Contact'
 import CallToAction from '../CallToAction/CallToAction'
 import Toolbar from '../Toolbar/Toolbar'
-import NavMenu from '../NavMenu/NavMenu'
-import Navbar from '../containers/components/Navbar'
+// import NavMenu from '../NavMenu/NavMenu'
+import Navbar from '../NavMenu/Navbar'
 
 
 const Home = () => {

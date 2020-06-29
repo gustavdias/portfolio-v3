@@ -12,15 +12,33 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
+import {
+  ArrowBack,
+  AssignmentInd,
+  Home,
+  Apps,
+  ContactMail,
+  GetApp,
+} from '@material-ui/icons';
+import Typed from "react-typed";
+import Typography from "@material-ui/core/Typography";
+import FooterMobile from '../Footer/FooterMobile'
+
 
 
 const useStyles = makeStyles((theme) => ({
+ button:{
+  color: '#dbb700'
 
+ },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   list: {
+    background: '#007a8c',
+    color: '#dbb700',
     width: 250,
+    height: '100%',
   },
   fullList: {
     width: "auto",
@@ -60,11 +78,26 @@ export default function NavDrawer(props) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
+
+
+<List>
+          <ListItem >
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            <Typography style={{ color: "#eaded0", fontFamily: "Montserrat" }}>
+            gustav.almd@gmail.com
+          </Typography>            </ListItemIcon>
+            <ListItemText  />
+          </ListItem>
+        
+      </List>
+
+      <Divider />
+
+      <List>
+        {["Home", "Contact"].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon className={classes.button}>
+              {index % 2 === 0 ? <Home /> : <ContactMail />}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
@@ -72,15 +105,17 @@ export default function NavDrawer(props) {
       </List>
       <Divider />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
+        {["Open Resume", "Download Resume"].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            <ListItemIcon className={classes.button}>
+              {index % 2 === 0 ? <AssignmentInd /> : <GetApp />}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
       </List>
+      <Divider />
+
     </div>
   );
 
@@ -103,8 +138,10 @@ export default function NavDrawer(props) {
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
+            color="inherit"
           >
             {list(anchor)}
+            <FooterMobile/>
           </SwipeableDrawer>
         </React.Fragment>
       ))}
