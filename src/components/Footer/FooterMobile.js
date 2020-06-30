@@ -32,14 +32,17 @@ const Footer = () => {
         style={{ padding: 0 }}
         icon={<Facebook />}
       /> */}
-      <BottomNavigationAction
+      {/* <BottomNavigationAction
         className={classes.root}
         style={{ padding: 0 }}
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/gustavdias"
         icon={<LinkedInIcon />}
-      />
+      /> */}
+    
+    
+    
       <BottomNavigationAction
         className={classes.root}
         target="_blank"

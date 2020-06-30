@@ -123,7 +123,7 @@ export default function NavDrawer(props) {
               color="inherit"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/gustavdias"
+              href="https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing"
             >
               {/* <Badge badgeContent={17} color="secondary"> */}
 
@@ -138,7 +138,7 @@ export default function NavDrawer(props) {
               style={{ color: "#dbb700", fontFamily: "Montserrat" }}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/gustavdias"
+              href="https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing"
             >
               Resume{" "}
             </Typography>
