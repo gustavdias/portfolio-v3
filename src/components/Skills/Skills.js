@@ -82,7 +82,6 @@ const tiers = [
   },
   {
     title: 'Frameworks and Libraries',
-    subheader: 'Most popular',
     // price: '15',
     description: [
       'React.js',

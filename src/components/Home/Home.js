@@ -6,9 +6,9 @@ import Box from "@material-ui/core/Box";
 import Skills from '../Skills/Skills'
 // import Contact from '../Contact/Contact'
 import CallToAction from '../CallToAction/CallToAction'
-import Toolbar from '../Toolbar/Toolbar'
+// import Toolbar from '../Toolbar/Toolbar'
 // import NavMenu from '../NavMenu/NavMenu'
-import Navbar from '../NavMenu/Navbar'
+// import Navbar from '../NavMenu/Navbar'
 
 
 const Home = () => {
@@ -18,7 +18,6 @@ const Home = () => {
       {/* <Navbar /> */}
       {/* <Toolbar/> */}
       {/* <NavMenu/> */}
-<Navbar/>
       <CallToAction/>
       <Projects />
       <Skills/>

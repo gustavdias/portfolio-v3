@@ -4,21 +4,22 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
+// import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
+// import MenuIcon from "@material-ui/icons/Menu";
+// import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
+// import MoreIcon from "@material-ui/icons/MoreVert";
 import NavDrawer from "./NavDrawer";
 import Typed from "react-typed";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
+// import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import AssignmentInd from "@material-ui/icons/AssignmentInd";
+import FileCopy from "@material-ui/icons/FileCopy";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -86,10 +87,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavBar(props) {
+const NavBar = (props) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+  // const email = this.props.textToCopy;
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -107,9 +110,9 @@ export default function NavBar(props) {
     handleMobileMenuClose();
   };
 
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
+  // const handleMobileMenuOpen = (event) => {
+  //   setMobileMoreAnchorEl(event.currentTarget);
+  // };
 
   const menuId = "primary-search-account-menu";
   const renderMenu = (
@@ -167,13 +170,16 @@ export default function NavBar(props) {
       </MenuItem>
     </Menu>
   );
+  console.log(props);
 
   return (
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
           <div className={classes.sectionMobile}>
-            <NavDrawer />
+            {/* --------------------------------- Repassing Props --------------------------------- */}
+
+            <NavDrawer email={props} />
           </div>
           {/* <IconButton
             edge="start"
@@ -198,23 +204,56 @@ export default function NavBar(props) {
 
           {/* --------------------------------- Search Bars --------------------------------- */}
           <div className={classes.sectionDesktop}>
-            <div className={classes.search}>
+            {/* <div className={classes.search}> */}
+            {/* <div className={classes.searchIcon}> */}
+            {/* <SearchIcon /> */}
+
+{/* Resume */}
+<IconButton
+                aria-label="show 4 new mails"
+                color="inherit"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing"
+              >
+                <AssignmentInd />
+              </IconButton>
+
+            {/* email */}
+            {/* <IconButton aria-label="show 4 new mails" color="inherit">
+              <FileCopy
+                onClick={() => {
+                  navigator.clipboard.writeText(props.email);
+                }}
+              />
+            </IconButton> */}
+            {/* </div> */}
+          </div>
+
+          {/* This part is for what you want to see only on desktop view */}
+          <div className={classes.sectionDesktop}>
+            {/* <div className={classes.search}> */}
               {/* <div className={classes.searchIcon}> */}
               {/* <SearchIcon /> */}
 
               {/* Resume */}
-              <IconButton aria-label="show 4 new mails" color="inherit">
+              {/* <IconButton
+                aria-label="show 4 new mails"
+                color="inherit"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/gustavdias"
+              >
                 <AssignmentInd />
-              </IconButton>
+              </IconButton> */}
 
               {/* email */}
-              <IconButton aria-label="show 4 new mails" color="inherit">
-                <MailIcon />
+              <IconButton aria-label="show 4 new mails" color="secondary">
+                <FileCopy onClick={() => {
+                  navigator.clipboard.writeText(props.email)}}/>
               </IconButton>
-            </div>
+            {/* </div> */}
           </div>
-
-          {/* This part is for what you want to see only on desktop view */}
           <div className={classes.sectionDesktop}>
             {/* --------------------------------- Email --------------------------------- */}
             <Typography style={{ color: "#19a9bc", fontFamily: "Montserrat" }}>
@@ -226,6 +265,7 @@ export default function NavBar(props) {
               />
             </Typography>
           </div>
+          
           {/* <InputBase
               placeholder="Search…"
               classes={{
@@ -239,23 +279,29 @@ export default function NavBar(props) {
 
           {/* This part is for what you want to see only on desktop view */}
           <div className={classes.sectionDesktop}>
-            <div className={classes.search}>
-              <IconButton aria-label="show 4 new mails" color="inherit">
-                <Badge >
+            {/* <div className={classes.search}> */}
+            {/* <IconButton aria-label="show 4 new mails" color="inherit"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/gustavdias">
+                <Badge>
                   <LinkedInIcon />
                 </Badge>
-              </IconButton>
-              <IconButton
-                aria-label="show 17 new notifications"
-                color="inherit"
-              >
-                                {/* <Badge badgeContent={17} color="secondary"> */}
+              </IconButton> */}
+            <IconButton
+              aria-label="show 17 new notifications"
+              color="inherit"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/gustavdias"
+            >
+              {/* <Badge badgeContent={17} color="secondary"> */}
 
-                <Badge >
-                  <GitHubIcon color="inherit" />
-                </Badge>
-              </IconButton>
-              {/* <IconButton
+              <Badge>
+                <GitHubIcon color="inherit" />
+              </Badge>
+            </IconButton>
+            {/* <IconButton
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -265,7 +311,7 @@ export default function NavBar(props) {
             >
               <AccountCircle />
             </IconButton> */}
-            </div>
+            {/* </div> */}
           </div>
 
           {/* This part is for what you want to see on mobile view */}
@@ -286,4 +332,5 @@ export default function NavBar(props) {
       {renderMenu}
     </div>
   );
-}
+};
+export default NavBar;
