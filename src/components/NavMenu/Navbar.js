@@ -20,6 +20,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 // import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import AssignmentInd from "@material-ui/icons/AssignmentInd";
 import FileCopy from "@material-ui/icons/FileCopy";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -208,8 +209,9 @@ const NavBar = (props) => {
             {/* <div className={classes.searchIcon}> */}
             {/* <SearchIcon /> */}
 
-{/* Resume */}
-<IconButton
+            {/* Resume */}
+            <Tooltip title="Open Resume">
+              <IconButton
                 aria-label="show 4 new mails"
                 color="inherit"
                 target="_blank"
@@ -218,7 +220,7 @@ const NavBar = (props) => {
               >
                 <AssignmentInd />
               </IconButton>
-
+            </Tooltip>
             {/* email */}
             {/* <IconButton aria-label="show 4 new mails" color="inherit">
               <FileCopy
@@ -233,11 +235,11 @@ const NavBar = (props) => {
           {/* This part is for what you want to see only on desktop view */}
           <div className={classes.sectionDesktop}>
             {/* <div className={classes.search}> */}
-              {/* <div className={classes.searchIcon}> */}
-              {/* <SearchIcon /> */}
+            {/* <div className={classes.searchIcon}> */}
+            {/* <SearchIcon /> */}
 
-              {/* Resume */}
-              {/* <IconButton
+            {/* Resume */}
+            {/* <IconButton
                 aria-label="show 4 new mails"
                 color="inherit"
                 target="_blank"
@@ -247,11 +249,16 @@ const NavBar = (props) => {
                 <AssignmentInd />
               </IconButton> */}
 
-              {/* email */}
+            {/* email */}
+            <Tooltip title="Copy email">
               <IconButton aria-label="show 4 new mails" color="secondary">
-                <FileCopy onClick={() => {
-                  navigator.clipboard.writeText(props.email)}}/>
+                <FileCopy
+                  onClick={() => {
+                    navigator.clipboard.writeText(props.email);
+                  }}
+                />
               </IconButton>
+            </Tooltip>
             {/* </div> */}
           </div>
           <div className={classes.sectionDesktop}>
@@ -265,7 +272,7 @@ const NavBar = (props) => {
               />
             </Typography>
           </div>
-          
+
           {/* <InputBase
               placeholder="Search…"
               classes={{

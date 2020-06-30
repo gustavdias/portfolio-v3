@@ -24,6 +24,8 @@ import {
 import Typography from "@material-ui/core/Typography";
 import FooterMobile from "../Footer/FooterMobile";
 import FileCopy from "@material-ui/icons/FileCopy";
+import{Link} from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -67,7 +69,6 @@ export default function NavDrawer(props) {
     setState({ ...state, [anchor]: open });
   };
 
-
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
@@ -94,7 +95,8 @@ export default function NavDrawer(props) {
       <List>
         {["Copy email"].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon className={classes.button}>
+            
+            <ListItemIcon className={classes.button}component={Link} to={'https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing.listPath'} >
               {index % 2 === 0 ? (
                 <FileCopy
                   onClick={() => {
@@ -118,42 +120,11 @@ export default function NavDrawer(props) {
 
       <List>
         <ListItem button key={34}>
-          <ListItemIcon
-            className={classes.button}
-          >
-
-<IconButton
-            
-             className={classes.button}
-              color="inherit"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/gustavdias"
-            >
-              {/* <Badge badgeContent={17} color="secondary"> */}
-
-              <AssignmentInd />
-
-            </IconButton>
-
-
-
-
+          <ListItemIcon className={classes.button}>
+            <AssignmentInd                 href="https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing"
+/>
           </ListItemIcon>
-          <ListItemText  >
-          {/* <ListItemText primary={"Resume"} > */}
-
-          <Typography
-            variant="h6"
-            style={{ color: "#dbb700", fontFamily: "Montserrat" }}
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/gustavdias"
-          >
-test
-          </Typography>
-            
-          </ListItemText>
+          <ListItemText primary={"Resume"} />
         </ListItem>
       </List>
 
@@ -166,7 +137,6 @@ test
               {index % 2 === 0 ? <Home /> : <ContactMail />}
             </ListItemIcon>
             <ListItemText primary={text} />
-            {/* <ListItemPath /> */}
           </ListItem>
         ))}
       </List>
@@ -186,7 +156,7 @@ test
       <Divider />
     </div>
   );
-  // console.log("props in NavDrawer" + props);
+  console.log("props in NavDrawer" + props);
   return (
     <div>
       {["right"].map((anchor) => (

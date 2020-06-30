@@ -67,7 +67,6 @@ export default function NavDrawer(props) {
     setState({ ...state, [anchor]: open });
   };
 
-
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
@@ -118,42 +117,10 @@ export default function NavDrawer(props) {
 
       <List>
         <ListItem button key={34}>
-          <ListItemIcon
-            className={classes.button}
-          >
-
-<IconButton
-            
-             className={classes.button}
-              color="inherit"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/gustavdias"
-            >
-              {/* <Badge badgeContent={17} color="secondary"> */}
-
-              <AssignmentInd />
-
-            </IconButton>
-
-
-
-
+          <ListItemIcon className={classes.button}>
+            <AssignmentInd />
           </ListItemIcon>
-          <ListItemText  >
-          {/* <ListItemText primary={"Resume"} > */}
-
-          <Typography
-            variant="h6"
-            style={{ color: "#dbb700", fontFamily: "Montserrat" }}
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/gustavdias"
-          >
-test
-          </Typography>
-            
-          </ListItemText>
+          <ListItemText primary={"Resume"} />
         </ListItem>
       </List>
 
@@ -166,7 +133,6 @@ test
               {index % 2 === 0 ? <Home /> : <ContactMail />}
             </ListItemIcon>
             <ListItemText primary={text} />
-            {/* <ListItemPath /> */}
           </ListItem>
         ))}
       </List>
@@ -186,7 +152,7 @@ test
       <Divider />
     </div>
   );
-  // console.log("props in NavDrawer" + props);
+  console.log("props in NavDrawer" + props);
   return (
     <div>
       {["right"].map((anchor) => (
