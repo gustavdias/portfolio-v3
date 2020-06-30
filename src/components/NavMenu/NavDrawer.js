@@ -67,7 +67,6 @@ export default function NavDrawer(props) {
     setState({ ...state, [anchor]: open });
   };
 
-
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
@@ -118,13 +117,9 @@ export default function NavDrawer(props) {
 
       <List>
         <ListItem button key={34}>
-          <ListItemIcon
-            className={classes.button}
-          >
-
-<IconButton
-            
-             className={classes.button}
+          <ListItemIcon className={classes.button}>
+            <IconButton
+              className={classes.button}
               color="inherit"
               target="_blank"
               rel="noopener noreferrer"
@@ -133,26 +128,20 @@ export default function NavDrawer(props) {
               {/* <Badge badgeContent={17} color="secondary"> */}
 
               <AssignmentInd />
-
             </IconButton>
-
-
-
-
           </ListItemIcon>
-          <ListItemText  >
-          {/* <ListItemText primary={"Resume"} > */}
+          <ListItemText>
+            {/* <ListItemText primary={"Resume"} > */}
 
-          <Typography
-            variant="h6"
-            style={{ color: "#dbb700", fontFamily: "Montserrat" }}
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/gustavdias"
-          >
-test
-          </Typography>
-            
+            <Typography
+              variant="h6"
+              style={{ color: "#dbb700", fontFamily: "Montserrat" }}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/gustavdias"
+            >
+              Resume{" "}
+            </Typography>
           </ListItemText>
         </ListItem>
       </List>

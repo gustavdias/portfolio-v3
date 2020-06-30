@@ -251,11 +251,11 @@ const NavBar = (props) => {
 
             {/* email */}
             <Tooltip title="Copy email">
-              <IconButton aria-label="show 4 new mails" color="secondary">
-                <FileCopy
-                  onClick={() => {
+              <IconButton aria-label="show 4 new mails" color="secondary"  onClick={() => {
                     navigator.clipboard.writeText(props.email);
-                  }}
+                  }}>
+                <FileCopy
+                 
                 />
               </IconButton>
             </Tooltip>

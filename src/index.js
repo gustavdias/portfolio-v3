@@ -6,13 +6,14 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme/theme';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
 <ThemeProvider theme={theme}>
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
     <CssBaseline />
     <App />
   </ThemeProvider>   
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 
+// </React.StrictMode>,
