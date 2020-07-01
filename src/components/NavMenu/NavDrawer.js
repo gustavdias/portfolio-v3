@@ -24,6 +24,7 @@ import {
 import Typography from "@material-ui/core/Typography";
 import FooterMobile from "../Footer/FooterMobile";
 import FileCopy from "@material-ui/icons/FileCopy";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -32,8 +33,12 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  listItem: {
+    // background: "#353236",
+    // color: "#19a9bc",
+  },
   list: {
-    background: "#007a8c",
+    background: "#353236",
     color: "#dbb700",
     width: 250,
     height: "100%",
@@ -76,20 +81,75 @@ export default function NavDrawer(props) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        <ListItem>
-          <ListItemIcon>
-            <Typography
-              style={{ color: "#eaded0", fontFamily: "Montserrat" }}
-              onClick={() => {
-                navigator.clipboard.writeText(props.email.email);
-              }}
-            >
-              gustav.almd@gmail.com
-            </Typography>{" "}
-          </ListItemIcon>
-        </ListItem>
+      <Divider />
+
+      <List className={classes.listItem}>
+        {["Home"].map((text, index) => (
+          <ListItem
+            button
+            key={text}
+            component={Link}
+            to="/"
+            variant="outlined"
+            color="secondary"
+          >
+            <ListItemIcon className={classes.button}>
+              {index % 2 === 0 ? <Home /> : <ContactMail />}
+            </ListItemIcon>
+            <ListItemText primary={text} />
+            {/* <ListItemPath /> */}
+          </ListItem>
+        ))}
       </List>
+      <Divider />
+
+      <List className={classes.listItem}>
+        {["Contact"].map((text, index) => (
+          <ListItem
+            button
+            key={text}
+            component={Link}
+            to="/contact"
+            variant="outlined"
+            color="secondary"
+          >
+            <ListItemIcon className={classes.button}>
+              <ContactMail />
+            </ListItemIcon>
+            <ListItemText primary={text} />
+            {/* <ListItemPath /> */}
+          </ListItem>
+        ))}
+      </List>
+
+
+
+
+      <Divider />
+
+      <List>
+        {["Resume"].map((text, index) => (
+          <ListItem
+            button
+            key={text}
+            component={Link}
+            to="/about"
+            variant="contained"
+            color="primary"
+          >
+            <ListItemIcon className={classes.button}>
+              {index % 2 === 0 ? <AssignmentInd /> : <ContactMail />}
+            </ListItemIcon>
+            <ListItemText primary={text} />
+            {/* <ListItemPath /> */}
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+
+
+
+
       <List>
         {["Copy email"].map((text, index) => (
           <ListItem button key={text}>
@@ -113,52 +173,23 @@ export default function NavDrawer(props) {
           </ListItem>
         ))}
       </List>
-      <Divider />
 
       <List>
-        <ListItem button key={34}>
-          <ListItemIcon className={classes.button}>
-            <IconButton
-              className={classes.button}
-              color="inherit"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing"
-            >
-              {/* <Badge badgeContent={17} color="secondary"> */}
-
-              <AssignmentInd />
-            </IconButton>
-          </ListItemIcon>
-          <ListItemText>
-            {/* <ListItemText primary={"Resume"} > */}
-
+        <ListItem>
+          <ListItemIcon>
             <Typography
-              variant="h6"
-              style={{ color: "#dbb700", fontFamily: "Montserrat" }}
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing"
+              style={{ color: "#eaded0", fontFamily: "Montserrat" }}
+              onClick={() => {
+                navigator.clipboard.writeText(props.email.email);
+              }}
             >
-              Resume{" "}
-            </Typography>
-          </ListItemText>
+              gustav.almd@gmail.com
+            </Typography>{" "}
+          </ListItemIcon>
         </ListItem>
       </List>
 
-      <Divider />
 
-      <List>
-        {["Home", "Contact"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon className={classes.button}>
-              {index % 2 === 0 ? <Home /> : <ContactMail />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-            {/* <ListItemPath /> */}
-          </ListItem>
-        ))}
-      </List>
       <Divider />
       {/* <List>
         {["Open Resume", "Download Resume"].map((text, index) => (

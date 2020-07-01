@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
+// import LinkedInIcon from "@material-ui/icons/LinkedIn";
 const useStyles = makeStyles({
   root: {
     "& .MuiBottomNavigationAction-root": {
@@ -25,7 +25,7 @@ const Footer = () => {
     <BottomNavigation
       width="auto"
       height="auto"
-      style={{ background: "#007a8c" }}
+      style={{ background: "#353236" }}
     >
       {/* <BottomNavigationAction
         className={classes.root}

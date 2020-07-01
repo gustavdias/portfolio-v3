@@ -21,6 +21,9 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import AssignmentInd from "@material-ui/icons/AssignmentInd";
 import FileCopy from "@material-ui/icons/FileCopy";
 import Tooltip from "@material-ui/core/Tooltip";
+import Button from "@material-ui/core/Button";
+import { Link } from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -251,12 +254,14 @@ const NavBar = (props) => {
 
             {/* email */}
             <Tooltip title="Copy email">
-              <IconButton aria-label="show 4 new mails" color="secondary"  onClick={() => {
-                    navigator.clipboard.writeText(props.email);
-                  }}>
-                <FileCopy
-                 
-                />
+              <IconButton
+                aria-label="show 4 new mails"
+                color="secondary"
+                onClick={() => {
+                  navigator.clipboard.writeText(props.email);
+                }}
+              >
+                <FileCopy />
               </IconButton>
             </Tooltip>
             {/* </div> */}
@@ -273,6 +278,8 @@ const NavBar = (props) => {
             </Typography>
           </div>
 
+
+
           {/* <InputBase
               placeholder="Search…"
               classes={{
@@ -283,7 +290,26 @@ const NavBar = (props) => {
             /> */}
           {/* </div> */}
           <div className={classes.grow} />
-
+          <div className={classes.sectionDesktop}>
+            <Button
+              className={classes.button}
+              component={Link}
+              to="/"
+              variant="outlined"
+              color="secondary"
+            >
+              HOME
+            </Button>
+            <Button
+              className={classes.button}
+              component={Link}
+              to="/contact"
+              variant="outlined"
+              color="secondary"
+            >
+              CONTACT
+            </Button>
+          </div>
           {/* This part is for what you want to see only on desktop view */}
           <div className={classes.sectionDesktop}>
             {/* <div className={classes.search}> */}
@@ -295,6 +321,9 @@ const NavBar = (props) => {
                   <LinkedInIcon />
                 </Badge>
               </IconButton> */}
+
+<Tooltip title="Visit my GitHub">
+
             <IconButton
               aria-label="show 17 new notifications"
               color="inherit"
@@ -308,6 +337,7 @@ const NavBar = (props) => {
                 <GitHubIcon color="inherit" />
               </Badge>
             </IconButton>
+            </Tooltip>
             {/* <IconButton
               edge="end"
               aria-label="account of current user"

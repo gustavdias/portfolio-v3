@@ -2,7 +2,7 @@ import React from 'react';
 import {makeStyles, withStyles } from '@material-ui/core/styles';
 import {TextField, Typography, Button, Grid, Box} from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
-import Navbar from '../Navbar/Navbar';
+// import Navbar from '../Navbar/Navbar';
 //import classes from '*.module.css';
 //import {Translate} from '@material-ui/icons'
 const useStyles = makeStyles((theme)=>({
@@ -47,7 +47,7 @@ const Contact = () => {
     const classes = useStyles();
     return (
         <Box component='div' style={{background:'#223', height: '100vh'}}>
-            <Navbar/>
+            {/* <Navbar/> */}
             <Grid container justify='center'>
                 <Box component='form' className={classes.form}>
                     <Typography variant='h5' style={{color: '#dbb700',textAlign:'center', textTransform: 'uppercase'}}>Hire / Contact Me</Typography>
