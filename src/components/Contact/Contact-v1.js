@@ -5,12 +5,10 @@ import SendIcon from '@material-ui/icons/Send';
 
 const useStyles = makeStyles((theme)=>({
     form:{
-        marginTop: '6rem',
-
-        // top:'50%',
-        // left:'50%',
-        // transform: 'translate(-50%,-50%)',
-        // position: 'absolute',
+        top:'50%',
+        left:'50%',
+        transform: 'translate(-50%,-50%)',
+        position: 'absolute',
     },
     button:{
         marginTop: '1rem',
@@ -46,9 +44,7 @@ root: {
 const Contact = () => {
     const classes = useStyles();
     return (
-        // <Box component='div'>
-                    <Box component='div' style={{background:'#223', height: '100vh'}}>
-
+        <Box component='div' style={{background:'#223', height: '100vh'}}>
             <Grid container justify='center'>
                 <Box component='form' className={classes.form}>
                     <Typography variant='h5' style={{color: '#dbb700',textAlign:'center', textTransform: 'uppercase'}}>Contact Me</Typography>

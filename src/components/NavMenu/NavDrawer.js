@@ -2,30 +2,24 @@ import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-// import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-// import InboxIcon from "@material-ui/icons/MoveToInbox";
-// import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 import {
-  // ArrowBack,
   AssignmentInd,
   Home,
-  // Apps,
   ContactMail,
-  // GetApp,
 } from "@material-ui/icons";
-// import Typed from "react-typed";
 import {Typography, Avatar} from "@material-ui/core";
 import FooterMobile from "../Footer/FooterMobile";
 import FileCopy from "@material-ui/icons/FileCopy";
 import { Link } from "react-router-dom";
 import avatar from '../../assets/images/android-chrome-512x512.png'
+// import Button from "@material-ui/core/Button";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -199,25 +193,7 @@ export default function NavDrawer(props) {
         ))}
       </List>
 
-
-
-
-
-
-
-      <Divider />
-      {/* <List>
-        {["Open Resume", "Download Resume"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon className={classes.button}>
-              {index % 2 === 0 ? <AssignmentInd        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/gustavdias" /> : <GetApp />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List> */}
+  
       <Divider />
     </div>
   );
@@ -233,7 +209,7 @@ export default function NavDrawer(props) {
             aria-label="open drawer"
             onClick={toggleDrawer(anchor, true)}
           >
-            <MenuIcon />
+            <MenuIcon style={{ fontSize: 40 }}/>
           </IconButton>
           {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
           <SwipeableDrawer
