@@ -21,12 +21,23 @@ import {
   // GetApp,
 } from "@material-ui/icons";
 // import Typed from "react-typed";
-import Typography from "@material-ui/core/Typography";
+import {Typography, Avatar} from "@material-ui/core";
 import FooterMobile from "../Footer/FooterMobile";
 import FileCopy from "@material-ui/icons/FileCopy";
 import { Link } from "react-router-dom";
+import avatar from '../../assets/images/android-chrome-512x512.png'
+
 
 const useStyles = makeStyles((theme) => ({
+  avatar: {
+    display: 'block',
+    margin: theme.spacing(1),
+    width: theme.spacing(13),
+    height: theme.spacing(13),
+  },
+  copyButton: {
+    color: "#eaded0",
+  },
   button: {
     color: "#dbb700",
   },
@@ -81,7 +92,49 @@ export default function NavDrawer(props) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <Divider />
+
+<Avatar src={avatar} className={classes.avatar} alt="Gustavo Dias" />
+      <List>
+        <ListItem>
+          <ListItemIcon>
+            <Typography
+              style={{ color: "#eaded0", fontFamily: "Montserrat" }}
+              onClick={() => {
+                navigator.clipboard.writeText(props.email.email);
+              }}
+            >
+              gustav.almd@gmail.com
+            </Typography>{" "}
+          </ListItemIcon>
+        </ListItem>
+      </List>
+
+
+      <List>
+        {["Copy email"].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon className={classes.copyButton}>
+              {index % 2 === 0 ? (
+                <FileCopy
+                  onClick={() => {
+                    navigator.clipboard.writeText(props.email.email);
+                  }}
+                />
+              ) : (
+                <ContactMail />
+              )}
+            </ListItemIcon>
+            <ListItemText
+             className={classes.copyButton}
+              primary={text}
+              onClick={() => {
+                navigator.clipboard.writeText(props.email.email);
+              }}
+            />
+          </ListItem>
+        ))}
+      </List>
+      <Divider/>
 
       <List className={classes.listItem}>
         {["Home"].map((text, index) => (
@@ -145,49 +198,11 @@ export default function NavDrawer(props) {
           </ListItem>
         ))}
       </List>
-      <Divider />
 
 
 
 
-      <List>
-        {["Copy email"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon className={classes.button}>
-              {index % 2 === 0 ? (
-                <FileCopy
-                  onClick={() => {
-                    navigator.clipboard.writeText(props.email.email);
-                  }}
-                />
-              ) : (
-                <ContactMail />
-              )}
-            </ListItemIcon>
-            <ListItemText
-              primary={text}
-              onClick={() => {
-                navigator.clipboard.writeText(props.email.email);
-              }}
-            />
-          </ListItem>
-        ))}
-      </List>
 
-      <List>
-        <ListItem>
-          <ListItemIcon>
-            <Typography
-              style={{ color: "#eaded0", fontFamily: "Montserrat" }}
-              onClick={() => {
-                navigator.clipboard.writeText(props.email.email);
-              }}
-            >
-              gustav.almd@gmail.com
-            </Typography>{" "}
-          </ListItemIcon>
-        </ListItem>
-      </List>
 
 
       <Divider />

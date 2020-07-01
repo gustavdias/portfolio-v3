@@ -77,8 +77,8 @@ const tiers = [
     title: 'Front end',
     // price: '0',
     description: ['JavaScript', 'HTML', 'CSS', 'SASS'],
-    buttonText: 'Sign up for free',
-    buttonVariant: 'outlined',
+    // buttonText: 'Sign up for free',
+    // buttonVariant: 'outlined',
   },
   {
     title: 'Frameworks and Libraries',
@@ -88,10 +88,10 @@ const tiers = [
       'Redux.js',
       'Material UI',
       'BootStrap',
-      'JQuery',
+      'jQuery',
     ],
-    buttonText: 'Get started',
-    buttonVariant: 'contained',
+    // buttonText: 'Get started',
+    // buttonVariant: 'contained',
   },
   {
     title: 'Back end',
@@ -105,8 +105,8 @@ const tiers = [
       'Ajax',
       'REST',
     ],
-    buttonText: 'Contact us',
-    buttonVariant: 'outlined',
+    // buttonText: 'Contact us',
+    // buttonVariant: 'outlined',
   },
   {
     title: 'Others',
@@ -120,8 +120,8 @@ const tiers = [
       'Conversion Rate Optimization',
       'SEO',
     ],
-    buttonText: 'Contact us',
-    buttonVariant: 'contained',
+    // buttonText: 'Contact us',
+    // buttonVariant: 'contained',
   },
 
 ];

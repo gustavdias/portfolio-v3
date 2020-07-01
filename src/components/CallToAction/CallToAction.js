@@ -57,7 +57,7 @@ const CallToAction = () => {
     <Grid container spacing={2} justify="center">
       <Grid item>
         <Button variant="contained" color="primary">
-          Main call to action
+          Download resume
         </Button>
       </Grid>
       <Grid item>

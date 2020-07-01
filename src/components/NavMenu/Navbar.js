@@ -26,8 +26,19 @@ import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
+
+
+  buttonR: {
+    // marginLeft: theme.spacing(5),
+    marginRight: theme.spacing(1),
+  },
+  buttonL: {
+    // marginLeft: theme.spacing(5),
+    marginRight: theme.spacing(7),
+  },
   grow: {
     flexGrow: 1,
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -292,7 +303,7 @@ const NavBar = (props) => {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Button
-              className={classes.button}
+              className={classes.buttonR}
               component={Link}
               to="/"
               variant="outlined"
@@ -301,7 +312,7 @@ const NavBar = (props) => {
               HOME
             </Button>
             <Button
-              className={classes.button}
+              className={classes.buttonL}
               component={Link}
               to="/contact"
               variant="outlined"
@@ -325,6 +336,7 @@ const NavBar = (props) => {
 <Tooltip title="Visit my GitHub">
 
             <IconButton
+            
               aria-label="show 17 new notifications"
               color="inherit"
               target="_blank"
