@@ -210,7 +210,6 @@ const NavBar = (props) => {
             {/* Resume */}
             <Tooltip title="Open Resume">
               <IconButton
-                aria-label="show 4 new mails"
                 color="inherit"
                 target="_blank"
                 rel="noopener noreferrer"

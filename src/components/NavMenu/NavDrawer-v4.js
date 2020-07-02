@@ -23,7 +23,7 @@ import avatar from '../../assets/images/android-chrome-512x512.png'
 import Button from "@material-ui/core/Button";
 
 
-
+// const resume = {href='https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing'}
 const useStyles = makeStyles((theme) => ({
   avatar: {
     // display: 'block',
@@ -37,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
   },
   copyButton: {
     color: "#eaded0",
+  },
+  butoonR:{
+    display:"flex",
+     justifyContent: "center"
+
   },
   button: {
     color: "#dbb700",
@@ -112,7 +117,7 @@ export default function NavDrawer(props) {
 
 
       <List>
-        {["COPY EMAIL"].map((text, index) => (
+        {["Copy email"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon className={classes.copyButton}>
               {index % 2 === 0 ? (
@@ -138,7 +143,7 @@ export default function NavDrawer(props) {
       <Divider/>
 
       <List className={classes.listItem}>
-        {["HOME"].map((text, index) => (
+        {["Home"].map((text, index) => (
           <ListItem
             button
             key={text}
@@ -158,7 +163,7 @@ export default function NavDrawer(props) {
       <Divider />
 
       <List className={classes.listItem}>
-        {["CONTACT"].map((text, index) => (
+        {["Contact"].map((text, index) => (
           <ListItem
             button
             key={text}
@@ -191,7 +196,7 @@ export default function NavDrawer(props) {
             variant="contained"
             color="primary"
           > */}
-<ListItem className={classes.copyButton}>
+<ListItem className={classes.resumeButton}>
 <IconButton
                 color="inherit"
                 target="_blank"
@@ -208,8 +213,7 @@ export default function NavDrawer(props) {
             {/* <ListItemText> */}
 
             <Button
-            display="flex" justifyContent="center"
-              className={classes.copyButton}
+              className={classes.buttonR}
               target="_blank"
               rel="noopener noreferrer"
               href="https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing"
@@ -231,25 +235,7 @@ Resume
       </List>
 
 
-      {/* <List>
-        {["Resume"].map((text, index) => (
-          <ListItem
-            button
-            key={text}
-            component={Link}
-            to="https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing"
-            variant="contained"
-            color="primary"
-          >
-            <ListItemIcon className={classes.button}>
-              {index % 2 === 0 ? <AssignmentInd /> : <ContactMail />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-            <ListItemPath />
-          </ListItem>
-        ))}
-      </List> */}
-
+     
   
       <Divider />
     </div>

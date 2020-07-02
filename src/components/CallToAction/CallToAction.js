@@ -46,9 +46,7 @@ const CallToAction = () => {
             color="textSecondary"
             paragraph
           >
-            Something short and leading about the collection below—its contents,
-            the creator, etc. Make it short and sweet, but not too short so
-            folks don&apos;t simply skip over it entirely.
+            Welcome! I am a Full Stack Software Developer. You can explore my collection of projects below. And don&apos;t forget to check my cv and contact.
           </Typography>
           <div className={classes.heroButtons}>
             <Grid container spacing={2} justify="center">
@@ -60,7 +58,7 @@ const CallToAction = () => {
                   rel="noopener noreferrer"
                   href="https://drive.google.com/file/d/11kDg6kOCOLxBYZUq6uK-8E2zeV5BXe1d/view?usp=sharing"
                 >
-                  Download resume
+                  Open resume
                 </Button>
               </Grid>
               <Grid item>

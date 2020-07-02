@@ -106,7 +106,7 @@ export default function Album() {
                       variant="h5"
                       component="h2"
                     >
-                      MongoDB {bull} Express {bull} React {bull} Node.js
+                      React {bull} Node.js {bull} Express {bull} Firebase Realtime Database
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -115,8 +115,7 @@ export default function Album() {
                     Burger Builder - Menu
                   </Typography>
                   <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
+                  A <strong>React</strong> Burger Builder App with <strong>database</strong> and <strong>deployment</strong> on <strong>Firebase</strong>. You can build your own burger, with many pieces of salad, bacon, cheese, and meat, in <strong>any screen size</strong>.
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -174,7 +173,7 @@ export default function Album() {
                   <Typography gutterBottom variant="h5" component="h2">
                     eT-exerciseTracker App
                   </Typography>
-                  <Typography variant='h6'>
+                  <Typography >
                     
                       <strong>MERN</strong> Stack - A <strong>React</strong>{" "}
                       Exercise Tracker App with <strong>MongoDB</strong>,{" "}
@@ -278,6 +277,8 @@ export default function Album() {
                 </CardActions>
               </Card>
             </Grid>
+
+
             {/* Card 4 Blue */}
             <Grid item key={4} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
@@ -296,7 +297,7 @@ export default function Album() {
                       variant="h5"
                       component="h2"
                     >
-                      MongoDB {bull} Express {bull} React {bull} Node.js
+                      React
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -305,19 +306,7 @@ export default function Album() {
                     React tic-tac-toe game with time travel
                   </Typography>
                   <Typography>
-                      <strong>MERN</strong> Stack - A <strong>React</strong>{" "}
-                      Exercise Tracker App with <strong>MongoDB</strong>,{" "}
-                      <strong>Express</strong>, and <strong>Node.js</strong> on
-                      the backend.
-                      <br />
-                      Extra dependencies: <strong>mongoose</strong>,{" "}
-                      <strong>axios</strong>, <strong>react-router-dom</strong>,{" "}
-                      <strong>bootstrap</strong>,{" "}
-                      <strong>react-datepicker</strong>, <strong>cors</strong>.
-         
-                      <strong>eT</strong> - your personal exercise tracker,{" "}
-                      <strong>so good</strong>,{" "}
-                      <strong>it is out of this planet</strong>! Give it a try!
+
                     
                   </Typography>
                 </CardContent>
@@ -348,13 +337,15 @@ export default function Album() {
                 </CardActions>
               </Card>
             </Grid>
+
+
             {/* Card 5 White*/}
             <Grid item key={5} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardActionArea
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://dev-burger-builder-939a7.web.app/"
+                  href="https://github.com/gustavdias/post-reserve"
                 >
 
 
@@ -367,17 +358,16 @@ export default function Album() {
                       variant="h5"
                       component="h2"
                     >
-                      MongoDB {bull} Express {bull} React {bull} Node.js
+                      JavaScript {bull} Node.js {bull} Express {bull} MongoDB {bull} Passport.js
                     </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Post & Reserve
+                    Post & Reserve App
                   </Typography>
                   <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
+                  <strong>Sign Up</strong>, <strong>Login</strong>, <strong>Create</strong> and <strong>Delete</strong> your own <strong>Posts</strong> and <strong>Comments</strong>. A Project using <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>Node.js</strong>, <strong>Express</strong>, mongoose with <strong>MongoDB</strong>, <strong>authentication</strong>, and authorization with <strong>Passport.js</strong>.
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -427,7 +417,7 @@ export default function Album() {
                       variant="h5"
                       component="h2"
                     >
-                      MongoDB {bull} Express {bull} React {bull} Node.js
+                      JavaScript {bull} HTML {bull} CSS 
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -436,8 +426,7 @@ export default function Album() {
                     Vanilla JS Todo List
                   </Typography>
                   <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
+                  A charming JavaScript Todo List, design with CSS.
                   </Typography>
                 </CardContent>
                 <CardActions>

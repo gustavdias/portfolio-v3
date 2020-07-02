@@ -104,6 +104,8 @@ const tiers = [
       'Linux',
       'Conversion Rate Optimization',
       'SEO',
+      'CMS',
+      'WordPress',
     ],
     // buttonText: 'Contact us',
     // buttonVariant: 'contained',
@@ -123,9 +125,7 @@ export default function Pricing() {
           Skills
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" component="p">
-          Quickly build an effective pricing table for your potential customers with this layout.
-          It&apos;s built with default Material-UI components with little customization.
-        </Typography>
+        A Full Stack Developer with several skills to contribute to your team and company. I also bring to the table my experience with SEO and Conversion Rate Optimization.        </Typography>
       </Container>
       {/* End hero unit */}
       <Container maxWidth="md" component="main">
