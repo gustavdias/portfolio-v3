@@ -49,8 +49,8 @@ const Contact = () => {
         // <Box component='div'>
                     <Box component='div' style={{background:'#223', height: '100vh'}}>
 
-            <Grid container justify='center'>
-                <Box component='form' className={classes.form}>
+            {/* <Grid container justify='center'>
+                <Box component='form' name="contact" method="POST" data-netlify="true" className={classes.form}>
                     <Typography variant='h5' style={{color: '#dbb700',textAlign:'center', textTransform: 'uppercase'}}>Contact Me</Typography>
                     <br/>
                     <InputField fullWidth={true} label='Name' variant='outlined' inputProps={{style:{color:'white'}}} margin='dense' size='medium'></InputField>
@@ -61,6 +61,24 @@ const Contact = () => {
 
                 <br/>
                 <Button className={classes.button} fullWidth={true} variant='outlined' endIcon={<SendIcon/>}>
+                    Contact Me
+                </Button>
+                </Box>
+            </Grid> */}
+
+            <Grid container justify='center'>
+                <Box component='form' name="contact" method="POST" data-netlify="true" className={classes.form}>
+                    
+                    <Typography variant='h5' style={{color: '#dbb700',textAlign:'center', textTransform: 'uppercase'}}>Contact Me</Typography>
+                    <br/>
+                    <InputField fullWidth={true} type='text' name='name' label='Name' variant='outlined' inputProps={{style:{color:'white'}}} margin='dense' size='medium'></InputField>
+                    <br/>
+                    <InputField  fullWidth={true} type='email' name='email' label='Email' variant='outlined' inputProps={{style:{color:'white'}}} margin='dense' size='medium'></InputField>
+                    <br/>
+                    <InputField fullWidth={true} type='text' name='message' label='Company' variant='outlined' inputProps={{style:{color:'white'}}} margin='dense' size='medium'></InputField>
+
+                <br/>
+                <Button type='submit' className={classes.button} fullWidth={true} variant='outlined' endIcon={<SendIcon/>}>
                     Contact Me
                 </Button>
                 </Box>
