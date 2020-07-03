@@ -67,7 +67,8 @@ const Contact = () => {
             </Grid> */}
 
             <Grid container justify='center'>
-                <Box component='form' name="contact" method="POST" data-netlify="true" className={classes.form}>
+                
+                <form  name="contact" netlify netlify-honeypot="bot-field" hidden className={classes.form}>
                     
                     <Typography variant='h5' style={{color: '#dbb700',textAlign:'center', textTransform: 'uppercase'}}>Contact Me</Typography>
                     <br/>
@@ -81,7 +82,7 @@ const Contact = () => {
                 <Button type='submit' className={classes.button} fullWidth={true} variant='outlined' endIcon={<SendIcon/>}>
                     Contact Me
                 </Button>
-                </Box>
+                </form>
             </Grid>
         </Box>
     )
