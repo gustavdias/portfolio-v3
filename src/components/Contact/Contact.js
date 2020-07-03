@@ -68,7 +68,7 @@ const Contact = () => {
 
             <Grid container justify='center'>
                 
-                <form  name="contact" netlify netlify-honeypot="bot-field" hidden className={classes.form}>
+                <form  name="contact" netlify netlify-honeypot="bot-field" className={classes.form}>
                     
                     <Typography variant='h5' style={{color: '#dbb700',textAlign:'center', textTransform: 'uppercase'}}>Contact Me</Typography>
                     <br/>
